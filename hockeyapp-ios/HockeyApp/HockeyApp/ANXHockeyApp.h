@@ -17,6 +17,8 @@
 
 #pragma mark Scan
 
+- (NSString*)version;
+
 - (void)configureWithIdentifier:(NSString *)appIdentifier;
 
 - (void)start;

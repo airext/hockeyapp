@@ -14,13 +14,20 @@
             <entry library-id="b5802bff-ada9-479e-9c8b-ef842a82142f">
               <dependency linkage="Merged" />
             </entry>
+            <entry library-id="eb36d221-4b09-4e44-b7a9-09f0d46c2809">
+              <dependency linkage="Merged" />
+            </entry>
           </entries>
           <sdk name="3.4.x" />
         </dependencies>
-        <compiler-options />
+        <compiler-options>
+          <option name="additionalOptions" value="-preloader=" />
+        </compiler-options>
         <packaging-air-desktop />
-        <packaging-android enabled="true" package-file-name="HockeyAppDebug" />
-        <packaging-ios enabled="true" package-file-name="HockeyAppDebug" />
+        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/HockeyAppDebug-app.xml" package-file-name="HockeyAppDebug" />
+        <packaging-ios enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/HockeyAppDebug-app.xml" package-file-name="HockeyAppDebug">
+          <AirSigningOptions keystore-path="$USER_HOME$/cert/rozd/max.rozdobudko.dev.p12" provisioning-profile-path="$USER_HOME$/cert/rozd/whateverdev.mobileprovision" />
+        </packaging-ios>
       </configuration>
     </configurations>
     <compiler-options />
@@ -62,6 +69,17 @@
         <JAVADOC />
         <SOURCES />
         <jarDirectory url="file://$USER_HOME$/sdks/feathers/3.4.0/frameworks/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="eb36d221-4b09-4e44-b7a9-09f0d46c2809" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/ane" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/ane" recursive="false" />
       </library>
     </orderEntry>
   </component>

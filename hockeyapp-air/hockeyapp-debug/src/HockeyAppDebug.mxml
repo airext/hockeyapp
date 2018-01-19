@@ -4,9 +4,57 @@
                theme="feathers.themes.MetalWorksMobileTheme">
 
     <fx:Script><![CDATA[
+        import com.github.airext.HockeyApp;
+
+        private function log(...args): void {
+            outpuText.text += args + "\n";
+            trace(args);
+        }
+
+        private function isSupportedTapped(): void {
+            log(HockeyApp.isSupported);
+        }
+
+        private function extensionVersion(): void {
+            log(HockeyApp.extensionVersion());
+        }
+
+        private function sdkVersion(): void {
+            log(HockeyApp.sdkVersion());
+        }
+
+        private function configure(): void {
+            HockeyApp.shared.configure("");
+        }
+
+        private function start(): void {
+            HockeyApp.shared.start();
+        }
 
         ]]></fx:Script>
 
+    <f:layout>
+        <f:VerticalLayout />
+    </f:layout>
 
+
+    <f:ScrollContainer>
+        <f:layoutData>
+            <f:VerticalLayoutData percentHeight="100" percentWidth="100" />
+        </f:layoutData>
+        <f:layout><f:VerticalLayout /></f:layout>
+        <f:Button label="Is Supported" triggered="isSupportedTapped()" />
+        <f:Button label="Extensions Version" triggered="extensionVersion()" />
+        <f:Button label="SDK Version" triggered="sdkVersion()" />
+        <f:Button label="Configure" triggered="configure()" />
+        <f:Button label="Start" triggered="start()" />
+
+    </f:ScrollContainer>
+
+    <f:ScrollText id="outpuText" height="100">
+        <f:layoutData>
+            <f:VerticalLayoutData percentWidth="100" />
+        </f:layoutData>
+    </f:ScrollText>
 
 </f:Application>

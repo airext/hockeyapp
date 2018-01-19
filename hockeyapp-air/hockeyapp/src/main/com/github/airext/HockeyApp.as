@@ -49,7 +49,7 @@ public class HockeyApp {
     //  isSupported
     //-------------------------------------
 
-    public static function isSupported():Boolean {
+    public static function get isSupported():Boolean {
         return context != null && context.call("isSupported");
     }
 
@@ -59,7 +59,7 @@ public class HockeyApp {
 
     private static var instance: HockeyApp;
 
-    public static function shared(): HockeyApp {
+    public static function get shared(): HockeyApp {
         if (instance == null) {
             new HockeyApp();
         }
@@ -98,6 +98,14 @@ public class HockeyApp {
         }
 
         return _extensionVersion;
+    }
+
+    //-------------------------------------
+    //  sdkVersion
+    //-------------------------------------
+
+    public static function sdkVersion(): String {
+        return context.call("version") as String;
     }
 
     //--------------------------------------------------------------------------

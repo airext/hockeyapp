@@ -172,3 +172,7 @@ freeline_project_description.json
 # ANT
 # 
 **/build.properties
+
+# AirExt
+#
+build/**/

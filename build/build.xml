@@ -80,12 +80,10 @@
 		<copy file="temp/ios/build/Release-iphoneos/libANXHockeyApp.a" todir="temp/ios" overwrite="true"/>
         <copy todir="temp/ios/HockeySDK.framework">
             <fileset dir="${ios.project.dir}/HockeyApp/Vendor/HockeySDK/HockeySDK.embeddedframework/HockeySDK.framework">
-                <exclude name="**/*.*"/>
             </fileset>
         </copy>
         <copy todir="temp/ios/HockeySDKResources.bundle">
             <fileset dir="${ios.project.dir}/HockeyApp/Vendor/HockeySDK/HockeySDK.embeddedframework/HockeySDKResources.bundle">
-                <exclude name="**/*.*"/>
             </fileset>
         </copy>
 
@@ -95,12 +93,10 @@
         <copy file="temp/ios/build/Debug-iphonesimulator/libANXHockeyApp.a" tofile="temp/ios-simulator/libANXHockeyAppSimulator.a" overwrite="true"/>
         <copy todir="temp/ios-simulator/HockeySDK.framework">
             <fileset dir="${ios.project.dir}/HockeyApp/Vendor/HockeySDK/HockeySDK.embeddedframework/HockeySDK.framework">
-                <exclude name="**/*.*"/>
             </fileset>
         </copy>
         <copy todir="temp/ios-simulator/HockeySDKResources.bundle">
             <fileset dir="${ios.project.dir}/HockeyApp/Vendor/HockeySDK/HockeySDK.embeddedframework/HockeySDKResources.bundle">
-                <exclude name="**/*.*"/>
             </fileset>
         </copy>
 
@@ -135,6 +131,8 @@
                 <exclude name="FlashRuntimeExtensions.jar" />
             </fileset>
         </copy>
+
+        <copy todir="temp/android" file="../${name}-android/Vendor/HockeySDK/HockeySDK.jar" overwrite="true" />
 
         <!-- Copy Native libraries -->
         <copy todir="temp/android/libs" overwrite="true">

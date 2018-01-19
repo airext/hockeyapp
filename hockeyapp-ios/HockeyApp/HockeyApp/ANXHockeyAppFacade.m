@@ -22,6 +22,12 @@ FREObject ANXHockeyAppIsSupported(FREContext context, void* functionData, uint32
     return [ANXHockeyAppConversionRoutines convertBoolToFREObject: YES];
 }
 
+FREObject ANXHockeyAppVersion(FREContext context, void* functionData, uint32_t argc, FREObject argv[]){
+    NSLog(@"ANXHockeyAppVersion");
+    return [ANXHockeyAppConversionRoutines convertNSStringToFREObject: [[ANXHockeyApp sharedInstance] version]];
+}
+
+
 FREObject ANXHockeyAppConfigure(FREContext context, void* functionData, uint32_t argc, FREObject argv[]) {
     NSLog(@"ANXHockeyAppConfigure");
 
@@ -42,7 +48,7 @@ FREObject ANXHockeyAppStart(FREContext context, void* functionData, uint32_t arg
 
 void ANXHockeyAppContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToSet, const FRENamedFunction** functionsToSet) {
 
-    *numFunctionsToSet = 3;
+    *numFunctionsToSet = 4;
 
     FRENamedFunction* func = (FRENamedFunction*) malloc(sizeof(FRENamedFunction) * (*numFunctionsToSet));
 
@@ -50,13 +56,17 @@ void ANXHockeyAppContextInitializer(void* extData, const uint8_t* ctxType, FRECo
     func[0].functionData = NULL;
     func[0].function = &ANXHockeyAppIsSupported;
 
-    func[1].name = (const uint8_t*) "configure";
+    func[1].name = (const uint8_t*) "version";
     func[1].functionData = NULL;
-    func[1].function = &ANXHockeyAppConfigure;
+    func[1].function = &ANXHockeyAppVersion;
 
-    func[2].name = (const uint8_t*) "start";
+    func[2].name = (const uint8_t*) "configure";
     func[2].functionData = NULL;
-    func[2].function = &ANXHockeyAppStart;
+    func[2].function = &ANXHockeyAppConfigure;
+
+    func[3].name = (const uint8_t*) "start";
+    func[3].functionData = NULL;
+    func[3].function = &ANXHockeyAppStart;
 
     *functionsToSet = func;
 }

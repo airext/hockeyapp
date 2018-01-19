@@ -12,8 +12,8 @@
         <option>-weak_framework Security</option>
         <option>-weak_framework SystemConfiguration</option>
 
-        <option>-libc</option>
-        <option>-libz</option>
+        <!--<option>-libc</option>-->
+        <!--<option>-libz</option>-->
     </linkerOptions>
 
     <packagedDependencies>

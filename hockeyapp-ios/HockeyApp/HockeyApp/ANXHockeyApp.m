@@ -30,6 +30,10 @@ static ANXHockeyApp* _sharedInstance = nil;
 
 #pragma mark Methods
 
+- (NSString*)version {
+    return [[BITHockeyManager sharedHockeyManager] version];
+}
+
 - (void)configureWithIdentifier:(NSString *)appIdentifier {
     [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:appIdentifier];
 }

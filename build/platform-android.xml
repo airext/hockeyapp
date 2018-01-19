@@ -1,13 +1,7 @@
 <platform xmlns="http://ns.adobe.com/air/extension/24.0">
     <description></description> 
     <packagedDependencies>
-        <packagedDependency>zbar.jar</packagedDependency>
-        <!--<packagedDependency>x86/libiconv.so</packagedDependency>-->
-        <!--<packagedDependency>x86/libzbarjni.so</packagedDependency>-->
-        <!--<packagedDependency>armeabi/libiconv.so</packagedDependency>-->
-        <!--<packagedDependency>armeabi/libzbarjni.so</packagedDependency>-->
-        <!--<packagedDependency>armeabi-v7a/libiconv.so</packagedDependency>-->
-        <!--<packagedDependency>armeabi-v7a/libzbarjni.so</packagedDependency>-->
+        <packagedDependency>HockeySDK.jar</packagedDependency>
     </packagedDependencies>
     <!--<packagedResources>-->
         <!--<packagedResource>-->

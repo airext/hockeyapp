@@ -18,7 +18,7 @@ public class HockeyApp {
     //  isSupported
     //-------------------------------------
 
-    public static function isSupported():Boolean {
+    public static function get isSupported(): Boolean {
         return false;
     }
 
@@ -28,7 +28,7 @@ public class HockeyApp {
 
     private static var instance: HockeyApp;
 
-    public static function shared(): HockeyApp {
+    public static function get shared(): HockeyApp {
         if (instance == null) {
             new HockeyApp();
         }
@@ -43,7 +43,17 @@ public class HockeyApp {
      * Returns version of extension
      * @return extension version
      */
-    public static function extensionVersion():String {
+    public static function extensionVersion(): String {
+        trace("[airext] HockeyApp extension is not supported on this platform.");
+        return null;
+    }
+
+    //-------------------------------------
+    //  sdkVersion
+    //-------------------------------------
+
+    public static function sdkVersion(): String {
+        trace("[airext] HockeyApp extension is not supported on this platform.");
         return null;
     }
 
