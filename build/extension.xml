@@ -1,0 +1,37 @@
+<extension xmlns="http://ns.adobe.com/air/extension/24.0">
+  <id>com.github.airext.HockeyApp</id>
+  <versionNumber>0.0.1</versionNumber>
+  <platforms>
+    <platform name="iPhone-ARM">
+      <applicationDeployment>
+        <nativeLibrary>libANXHockeyApp.a</nativeLibrary>
+        <initializer>ANXHockeyAppInitializer</initializer>
+        <finalizer>ANXHockeyAppFinalizer</finalizer>
+      </applicationDeployment>
+    </platform>
+    <platform name="iPhone-x86">
+      <applicationDeployment>
+        <nativeLibrary>libANXHockeyAppSimulator.a</nativeLibrary>
+        <initializer>ANXHockeyAppInitializer</initializer>
+        <finalizer>ANXHockeyAppFinalizer</finalizer>
+      </applicationDeployment>
+    </platform>
+    <!--<platform name="Android-ARM">-->
+      <!--<applicationDeployment>-->
+        <!--<nativeLibrary>libANXHockeyApp.jar</nativeLibrary>-->
+        <!--<initializer>com.github.airext.HockeyApp</initializer>-->
+        <!--<finalizer>com.github.airext.HockeyApp</finalizer>-->
+      <!--</applicationDeployment>-->
+    <!--</platform>-->
+    <!--<platform name="Android-x86">-->
+      <!--<applicationDeployment>-->
+        <!--<nativeLibrary>libANXHockeyApp.jar</nativeLibrary>-->
+        <!--<initializer>com.github.airext.HockeyApp</initializer>-->
+        <!--<finalizer>com.github.airext.HockeyApp</finalizer>-->
+      <!--</applicationDeployment>-->
+    <!--</platform>-->
+    <platform name="default">
+      <applicationDeployment/>
+    </platform>
+  </platforms>
+</extension>

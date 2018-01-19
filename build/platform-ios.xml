@@ -1,0 +1,22 @@
+<platform xmlns="http://ns.adobe.com/air/extension/24.0">
+    <description></description> 
+    <sdkVersion>8.0</sdkVersion>
+
+    <linkerOptions>
+        <option>-ios_version_min 8.0</option>
+        <option>-weak_framework CoreText</option>
+        <option>-weak_framework CoreGraphics</option>
+        <option>-weak_framework MobileCoreServices</option>
+        <option>-weak_framework QuartzCore</option>
+        <option>-weak_framework QuickLook</option>
+        <option>-weak_framework Security</option>
+        <option>-weak_framework SystemConfiguration</option>
+
+        <option>-libc</option>
+        <option>-libz</option>
+    </linkerOptions>
+
+    <packagedDependencies>
+        <packagedDependency>HockeySDK.framework</packagedDependency>
+    </packagedDependencies>
+</platform>

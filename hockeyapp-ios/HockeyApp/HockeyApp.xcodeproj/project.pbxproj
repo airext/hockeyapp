@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50C5AF56200FC51E00BCDBFD /* ANXHockeyApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C5AF55200FC51E00BCDBFD /* ANXHockeyApp.m */; };
+		50C5AF57200FC51E00BCDBFD /* ANXHockeyApp.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50C5AF54200FC51E00BCDBFD /* ANXHockeyApp.h */; };
+		50C5AF612010922400BCDBFD /* ANXHockeyAppFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C5AF602010922400BCDBFD /* ANXHockeyAppFacade.m */; };
+		50C5AF66201092CF00BCDBFD /* ANXHockeyAppConversionRoutines.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C5AF65201092CF00BCDBFD /* ANXHockeyAppConversionRoutines.m */; };
+		50C5AF6F201096E500BCDBFD /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C5AF6D201096CB00BCDBFD /* HockeySDK.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		50C5AF4F200FC51E00BCDBFD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				50C5AF57200FC51E00BCDBFD /* ANXHockeyApp.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		50C5AF51200FC51E00BCDBFD /* libANXHockeyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libANXHockeyApp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C5AF54200FC51E00BCDBFD /* ANXHockeyApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANXHockeyApp.h; sourceTree = "<group>"; };
+		50C5AF55200FC51E00BCDBFD /* ANXHockeyApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANXHockeyApp.m; sourceTree = "<group>"; };
+		50C5AF5F2010922400BCDBFD /* ANXHockeyAppFacade.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANXHockeyAppFacade.h; sourceTree = "<group>"; };
+		50C5AF602010922400BCDBFD /* ANXHockeyAppFacade.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANXHockeyAppFacade.m; sourceTree = "<group>"; };
+		50C5AF632010928600BCDBFD /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
+		50C5AF64201092CF00BCDBFD /* ANXHockeyAppConversionRoutines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANXHockeyAppConversionRoutines.h; sourceTree = "<group>"; };
+		50C5AF65201092CF00BCDBFD /* ANXHockeyAppConversionRoutines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANXHockeyAppConversionRoutines.m; sourceTree = "<group>"; };
+		50C5AF6D201096CB00BCDBFD /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
+		50C5AF6E201096CB00BCDBFD /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HockeySDKResources.bundle; sourceTree = "<group>"; };
+		50C5AF712010973600BCDBFD /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
+		50C5AF722010973600BCDBFD /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HockeySDKResources.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50C5AF4E200FC51E00BCDBFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C5AF6F201096E500BCDBFD /* HockeySDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50C5AF48200FC51E00BCDBFD = {
+			isa = PBXGroup;
+			children = (
+				50C5AF53200FC51E00BCDBFD /* HockeyApp */,
+				50C5AF52200FC51E00BCDBFD /* Products */,
+				50C5AF6B201096CB00BCDBFD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		50C5AF52200FC51E00BCDBFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50C5AF51200FC51E00BCDBFD /* libANXHockeyApp.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50C5AF53200FC51E00BCDBFD /* HockeyApp */ = {
+			isa = PBXGroup;
+			children = (
+				50C5AF672010967F00BCDBFD /* Dependencies */,
+				50C5AF622010927800BCDBFD /* Supporting Files */,
+				50C5AF54200FC51E00BCDBFD /* ANXHockeyApp.h */,
+				50C5AF55200FC51E00BCDBFD /* ANXHockeyApp.m */,
+				50C5AF5F2010922400BCDBFD /* ANXHockeyAppFacade.h */,
+				50C5AF602010922400BCDBFD /* ANXHockeyAppFacade.m */,
+				50C5AF64201092CF00BCDBFD /* ANXHockeyAppConversionRoutines.h */,
+				50C5AF65201092CF00BCDBFD /* ANXHockeyAppConversionRoutines.m */,
+			);
+			path = HockeyApp;
+			sourceTree = "<group>";
+		};
+		50C5AF622010927800BCDBFD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50C5AF632010928600BCDBFD /* FlashRuntimeExtensions.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50C5AF672010967F00BCDBFD /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				50C5AF702010973600BCDBFD /* HockeySDK.embeddedframework */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		50C5AF6B201096CB00BCDBFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50C5AF6C201096CB00BCDBFD /* HockeySDK.embeddedframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50C5AF6C201096CB00BCDBFD /* HockeySDK.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				50C5AF6D201096CB00BCDBFD /* HockeySDK.framework */,
+				50C5AF6E201096CB00BCDBFD /* HockeySDKResources.bundle */,
+			);
+			name = HockeySDK.embeddedframework;
+			path = HockeyApp/Vendor/HockeySDK/HockeySDK.embeddedframework;
+			sourceTree = "<group>";
+		};
+		50C5AF702010973600BCDBFD /* HockeySDK.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				50C5AF712010973600BCDBFD /* HockeySDK.framework */,
+				50C5AF722010973600BCDBFD /* HockeySDKResources.bundle */,
+			);
+			name = HockeySDK.embeddedframework;
+			path = Vendor/HockeySDK/HockeySDK.embeddedframework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50C5AF50200FC51E00BCDBFD /* ANXHockeyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50C5AF5A200FC51E00BCDBFD /* Build configuration list for PBXNativeTarget "ANXHockeyApp" */;
+			buildPhases = (
+				50C5AF4D200FC51E00BCDBFD /* Sources */,
+				50C5AF4E200FC51E00BCDBFD /* Frameworks */,
+				50C5AF4F200FC51E00BCDBFD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ANXHockeyApp;
+			productName = HockeyApp;
+			productReference = 50C5AF51200FC51E00BCDBFD /* libANXHockeyApp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50C5AF49200FC51E00BCDBFD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Max Rozdobudko";
+				TargetAttributes = {
+					50C5AF50200FC51E00BCDBFD = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 50C5AF4C200FC51E00BCDBFD /* Build configuration list for PBXProject "HockeyApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 50C5AF48200FC51E00BCDBFD;
+			productRefGroup = 50C5AF52200FC51E00BCDBFD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50C5AF50200FC51E00BCDBFD /* ANXHockeyApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50C5AF4D200FC51E00BCDBFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C5AF612010922400BCDBFD /* ANXHockeyAppFacade.m in Sources */,
+				50C5AF66201092CF00BCDBFD /* ANXHockeyAppConversionRoutines.m in Sources */,
+				50C5AF56200FC51E00BCDBFD /* ANXHockeyApp.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		50C5AF58200FC51E00BCDBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		50C5AF59200FC51E00BCDBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50C5AF5B200FC51E00BCDBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GL9F4DL9W9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HockeyApp/Vendor/HockeySDK/HockeySDK.embeddedframework",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		50C5AF5C200FC51E00BCDBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GL9F4DL9W9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HockeyApp/Vendor/HockeySDK/HockeySDK.embeddedframework",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50C5AF4C200FC51E00BCDBFD /* Build configuration list for PBXProject "HockeyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C5AF58200FC51E00BCDBFD /* Debug */,
+				50C5AF59200FC51E00BCDBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50C5AF5A200FC51E00BCDBFD /* Build configuration list for PBXNativeTarget "ANXHockeyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C5AF5B200FC51E00BCDBFD /* Debug */,
+				50C5AF5C200FC51E00BCDBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50C5AF49200FC51E00BCDBFD /* Project object */;
+}
