@@ -3,7 +3,7 @@ AIR native extension for HockeyApp platform
 
 ## Installation 
 
-1. Download [hockeyapp.ane](https://github.com/airext/hockeyapp/releases) ANE and [add it as dependencies](http://bit.ly/2xTSJry) to your project. 
+1. Download [com.github.airext.HockeyApp.ane](https://github.com/airext/hockeyapp/releases) ANE and [add it as dependencies](http://bit.ly/2xTSJry) to your project. 
 
 2. Edit your [Application Descriptor](http://help.adobe.com/en_US/air/build/WS5b3ccc516d4fbf351e63e3d118666ade46-7ff1.html) file with registering new native extensions like this:
 ```xml
