@@ -5,6 +5,7 @@ import com.adobe.fre.FREFunction;
 import com.github.airext.hockeyapp.functions.ConfigureFunction;
 import com.github.airext.hockeyapp.functions.IsSupportedFunction;
 import com.github.airext.hockeyapp.functions.StartFunction;
+import com.github.airext.hockeyapp.functions.VersionFunction;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,6 +20,7 @@ public class ExtensionContext extends FREContext {
     public Map<String, FREFunction> getFunctions() {
         Map<String, FREFunction> functions = new HashMap<String, FREFunction>();
         functions.put("isSupported", new IsSupportedFunction());
+        functions.put("version", new VersionFunction());
         functions.put("configure", new ConfigureFunction());
         functions.put("start", new StartFunction());
         return functions;
