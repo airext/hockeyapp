@@ -16,20 +16,20 @@
         <finalizer>ANXHockeyAppFinalizer</finalizer>
       </applicationDeployment>
     </platform>
-    <!--<platform name="Android-ARM">-->
-      <!--<applicationDeployment>-->
-        <!--<nativeLibrary>libANXHockeyApp.jar</nativeLibrary>-->
-        <!--<initializer>com.github.airext.HockeyApp</initializer>-->
-        <!--<finalizer>com.github.airext.HockeyApp</finalizer>-->
-      <!--</applicationDeployment>-->
-    <!--</platform>-->
-    <!--<platform name="Android-x86">-->
-      <!--<applicationDeployment>-->
-        <!--<nativeLibrary>libANXHockeyApp.jar</nativeLibrary>-->
-        <!--<initializer>com.github.airext.HockeyApp</initializer>-->
-        <!--<finalizer>com.github.airext.HockeyApp</finalizer>-->
-      <!--</applicationDeployment>-->
-    <!--</platform>-->
+    <platform name="Android-ARM">
+      <applicationDeployment>
+        <nativeLibrary>libANXHockeyApp.jar</nativeLibrary>
+        <initializer>com.github.airext.HockeyApp</initializer>
+        <finalizer>com.github.airext.HockeyApp</finalizer>
+      </applicationDeployment>
+    </platform>
+    <platform name="Android-x86">
+      <applicationDeployment>
+        <nativeLibrary>libANXHockeyApp.jar</nativeLibrary>
+        <initializer>com.github.airext.HockeyApp</initializer>
+        <finalizer>com.github.airext.HockeyApp</finalizer>
+      </applicationDeployment>
+    </platform>
     <platform name="default">
       <applicationDeployment/>
     </platform>
