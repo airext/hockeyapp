@@ -133,6 +133,11 @@
         </copy>
 
         <copy todir="temp/android" file="../${name}-android/Vendor/HockeySDK/HockeySDK.jar" overwrite="true" />
+        <copy todir="temp/android/res" overwrite="true">
+            <fileset dir="../${name}-android/Vendor/HockeySDK/res">
+                <include name="**/*.*" />
+            </fileset>
+        </copy>
 
         <!-- Copy Native libraries -->
         <copy todir="temp/android/libs" overwrite="true">

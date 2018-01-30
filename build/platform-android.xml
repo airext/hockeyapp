@@ -3,10 +3,10 @@
     <packagedDependencies>
         <packagedDependency>HockeySDK.jar</packagedDependency>
     </packagedDependencies>
-    <!--<packagedResources>-->
-        <!--<packagedResource>-->
-            <!--<packageName></packageName>-->
-            <!--<folderName></folderName>-->
-        <!--</packagedResource>-->
-    <!--</packagedResources>-->
+    <packagedResources>
+        <packagedResource>
+            <packageName>net.hockeyapp.android</packageName>
+            <folderName>res</folderName>
+        </packagedResource>
+    </packagedResources>
 </platform>
