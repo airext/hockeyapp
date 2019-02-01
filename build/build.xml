@@ -178,7 +178,6 @@
             <arg line='-source-path ${air.project.dir}/src/main'/>
             <arg line='-output temp/swc/ios/${name}.swc'/>
             <!-- <arg line='-swf-version=13'/> -->
-            <arg line='-external-library-path+="${air.project.dir}/lib"' />
             <arg line='-external-library-path+="${air.sdk}/frameworks/libs/air/airglobal.swc"'/>
             <arg line='-include-classes ${classlist.ios}'/>
         </exec>
