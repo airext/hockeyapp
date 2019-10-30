@@ -7,7 +7,7 @@
         import com.github.airext.HockeyApp;
 
         private function log(...args): void {
-            outpuText.text += args + "\n";
+            outputText.text += args + "\n";
             trace(args);
         }
 
@@ -30,7 +30,6 @@
         private function start(): void {
             HockeyApp.shared.start();
         }
-
         ]]></fx:Script>
 
     <f:layout>
@@ -51,7 +50,7 @@
 
     </f:ScrollContainer>
 
-    <f:ScrollText id="outpuText" height="100">
+    <f:ScrollText id="outputText" height="100">
         <f:layoutData>
             <f:VerticalLayoutData percentWidth="100" />
         </f:layoutData>

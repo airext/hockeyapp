@@ -8,23 +8,25 @@
             <entry library-id="e173ebe6-d777-4391-8fa8-8a832fadffae">
               <dependency linkage="Merged" />
             </entry>
-            <entry library-id="cf7fbe56-1c9f-452e-882d-eede35bd5be2">
-              <dependency linkage="Merged" />
-            </entry>
-            <entry library-id="b5802bff-ada9-479e-9c8b-ef842a82142f">
-              <dependency linkage="Merged" />
-            </entry>
             <entry library-id="eb36d221-4b09-4e44-b7a9-09f0d46c2809">
               <dependency linkage="Merged" />
             </entry>
+            <entry library-id="dca941ed-0d39-4b62-b6dc-2281fe92feef">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="614d6669-5135-4d42-9b33-9367fa0eca87">
+              <dependency linkage="Merged" />
+            </entry>
           </entries>
-          <sdk name="3.4.x" />
+          <sdk name="4.0.0-air33.0-starling2.5.1" />
         </dependencies>
         <compiler-options>
           <option name="additionalOptions" value="-preloader=" />
         </compiler-options>
         <packaging-air-desktop />
-        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/HockeyAppDebug-app.xml" package-file-name="HockeyAppDebug" />
+        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/HockeyAppDebug-app.xml" package-file-name="HockeyAppDebug">
+          <AirSigningOptions arch="armv8" />
+        </packaging-android>
         <packaging-ios enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/HockeyAppDebug-app.xml" package-file-name="HockeyAppDebug">
           <AirSigningOptions keystore-path="$USER_HOME$/cert/rozd/max.rozdobudko.dev.p12" provisioning-profile-path="$USER_HOME$/cert/rozd/whateverdev.mobileprovision" />
         </packaging-ios>
@@ -37,7 +39,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="3.4.x" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="jdk" jdkName="4.0.0-air33.0-starling2.5.1" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
       <library type="flex">
@@ -52,27 +54,6 @@
     </orderEntry>
     <orderEntry type="module-library" exported="">
       <library type="flex">
-        <properties id="cf7fbe56-1c9f-452e-882d-eede35bd5be2" />
-        <CLASSES>
-          <root url="jar://$USER_HOME$/sdks/feathers/3.4.0/frameworks/themes/MetalWorksMobileTheme/MetalWorksMobileTheme.swc!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library type="flex">
-        <properties id="b5802bff-ada9-479e-9c8b-ef842a82142f" />
-        <CLASSES>
-          <root url="file://$USER_HOME$/sdks/feathers/3.4.0/frameworks/libs" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-        <jarDirectory url="file://$USER_HOME$/sdks/feathers/3.4.0/frameworks/libs" recursive="false" />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library type="flex">
         <properties id="eb36d221-4b09-4e44-b7a9-09f0d46c2809" />
         <CLASSES>
           <root url="file://$MODULE_DIR$/ane" />
@@ -80,6 +61,28 @@
         <JAVADOC />
         <SOURCES />
         <jarDirectory url="file://$MODULE_DIR$/ane" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="dca941ed-0d39-4b62-b6dc-2281fe92feef" />
+        <CLASSES>
+          <root url="file://$USER_HOME$/sdks/feathers/4.0.0-air33.0-starling2.5.1/frameworks/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$USER_HOME$/sdks/feathers/4.0.0-air33.0-starling2.5.1/frameworks/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="614d6669-5135-4d42-9b33-9367fa0eca87" />
+        <CLASSES>
+          <root url="file://$USER_HOME$/sdks/feathers/4.0.0-air33.0-starling2.5.1/frameworks/themes/MetalWorksMobileTheme" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$USER_HOME$/sdks/feathers/4.0.0-air33.0-starling2.5.1/frameworks/themes/MetalWorksMobileTheme" recursive="false" />
       </library>
     </orderEntry>
   </component>

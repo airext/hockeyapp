@@ -5,12 +5,14 @@
     <!--                             Properties                              -->
     <!--=====================================================================-->
 
-    <property name="name" value="hockeyapp" />
+    <property name="project.name" value="hockeyapp" />
+    <property name="product.name" value="HockeyApp" />
+    <property name="extension.id" value="com.github.airext.HockeyApp" />
 
-    <property name="ios.project.dir" value="../${name}-ios/HockeyApp" />
-    <property name="air.project.dir" value="../${name}-air/${name}" />
-    <property name="air-debug.project.dir" value="../${name}-air/${name}-debug" />
-    <property name="android.project.dir" value="../${name}-android/${name}" />
+    <property name="ios.project.dir" value="../${project.name}-ios/HockeyApp" />
+    <property name="air.project.dir" value="../${project.name}-air/${project.name}" />
+    <property name="air-debug.project.dir" value="../${project.name}-air/${project.name}-debug" />
+    <property name="android.project.dir" value="../${project.name}-android/${project.name}" />
 
 	<property file="build.properties"/>
 
@@ -119,7 +121,7 @@
 		</exec>
 
 		<!-- Copy Android build artifacts to temporary build folder -->
-		<copy file="${android.project.dir}/build/libs/${name}.jar" tofile="temp/android/libANXHockeyApp.jar" overwrite="true"/>
+		<copy file="${android.project.dir}/build/libs/${project.name}.jar" tofile="temp/android/libANXHockeyApp.jar" overwrite="true"/>
 
         <!-- Copy manifest to include it into ANE file -->
         <copy file="${android.project.dir}/src/main/AndroidManifest.xml" todir="temp/android" overwrite="true"/>
@@ -132,9 +134,9 @@
             </fileset>
         </copy>
 
-        <copy todir="temp/android" file="../${name}-android/Vendor/HockeySDK/HockeySDK.jar" overwrite="true" />
+        <copy todir="temp/android" file="../${project.name}-android/Vendor/HockeySDK/HockeySDK.jar" overwrite="true" />
         <copy todir="temp/android/res" overwrite="true">
-            <fileset dir="../${name}-android/Vendor/HockeySDK/res">
+            <fileset dir="../${project.name}-android/Vendor/HockeySDK/res">
                 <include name="**/*.*" />
             </fileset>
         </copy>
@@ -176,14 +178,14 @@
             <arg line='-jar ${air.sdk}/lib/compc-cli.jar' />
             <arg line='-debug=false' />
             <arg line='-source-path ${air.project.dir}/src/main'/>
-            <arg line='-output temp/swc/ios/${name}.swc'/>
+            <arg line='-output temp/swc/ios/${project.name}.swc'/>
             <!-- <arg line='-swf-version=13'/> -->
             <arg line='-external-library-path+="${air.sdk}/frameworks/libs/air/airglobal.swc"'/>
             <arg line='-include-classes ${classlist.ios}'/>
         </exec>
         
         <!-- Unzip .SWC to copy internal library.swf file to corresponded platfom folders -->
-        <unzip src="temp/swc/ios/${name}.swc" dest="temp/swc/build" overwrite="true"/>
+        <unzip src="temp/swc/ios/${project.name}.swc" dest="temp/swc/build" overwrite="true"/>
 
         <!-- Copy library.swf to iOS platform folder -->
         <copy file="temp/swc/build/library.swf" todir="temp/ios" overwrite="true"/>
@@ -218,14 +220,14 @@
             <arg line='-jar ${air.sdk}/lib/compc-cli.jar' />
             <arg line='-debug=false' />
             <arg line='-source-path+=${air.project.dir}/src/default'/>
-            <arg line='-output temp/swc/default/${name}.swc'/>
+            <arg line='-output temp/swc/default/${project.name}.swc'/>
             <!-- <arg line='-swf-version=13'/> -->
             <arg line='-external-library-path+="${air.sdk}/frameworks/libs/air/airglobal.swc"'/>
             <arg line='-include-classes ${classlist.default}'/>
         </exec>
         
         <!-- Unzip .SWC to copy internal library.swf file to corresponded platfom folders -->
-        <unzip src="temp/swc/default/${name}.swc" dest="temp/swc/build" overwrite="true"/>
+        <unzip src="temp/swc/default/${project.name}.swc" dest="temp/swc/build" overwrite="true"/>
 
         <!-- Copy library.swf to Default platform folder -->
         <copy file="temp/swc/build/library.swf" todir="temp/default" overwrite="true"/>
@@ -254,24 +256,25 @@
             <arg line="-tsa http://timestamp.entrust.net/TSS/JavaHttpTS"/>
             <arg line="-target"/>
             <arg line="ane"/>
-            <arg line="${name}.ane"/>
+            <arg line="${project.name}.ane"/>
             <arg line="../extension.xml"/>
-            <arg line="-swc swc/default/${name}.swc"/>
+            <arg line="-swc swc/default/${project.name}.swc"/>
             <arg line="-platform iPhone-ARM -platformoptions ../platform-ios.xml -C ios/ ."/>
             <arg line="-platform iPhone-x86 -platformoptions ../platform-ios.xml -C ios-simulator/ ."/>
+            <arg line="-platform Android-ARM64 -platformoptions ../platform-android.xml -C android/ ."/>
             <arg line="-platform Android-ARM -platformoptions ../platform-android.xml -C android/ ."/>
             <arg line="-platform Android-x86 -platformoptions ../platform-android.xml -C android/ ."/>
             <arg line="-platform default -C default/ ."/>
         </exec>
 
         <!-- Move packaged .ANE file to /bin directory -->
-        <move file="temp/${name}.ane" todir="../bin"/>
+        <move file="temp/${project.name}.ane" tofile="../bin/${extension.id}.ane" force="true" />
 
         <!-- Move default .SWC library to /bin directory -->
-        <copy file="temp/swc/default/${name}.swc" todir="../bin"/>
+        <copy file="temp/swc/default/${project.name}.swc" tofile="../bin/${extension.id}.swc" force="true" />
 
-        <copy file="../bin/${name}.ane" tofile="../${name}-air/${name}-debug/ane/${name}.ane" force="true" />
-        <copy file="../bin/${name}.swc" tofile="../${name}-air/${name}-debug/ane/${name}.swc" force="true" />
+        <copy file="../bin/${extension.id}.ane" tofile="../${project.name}-air/${project.name}-debug/ane/${extension.id}.ane" force="true" />
+        <copy file="../bin/${extension.id}.swc" tofile="../${project.name}-air/${project.name}-debug/ane/${extension.id}.swc" force="true" />
 
         <!-- Remove temporary directory -->
          <delete dir="temp"/>

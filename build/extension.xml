@@ -1,6 +1,6 @@
 <extension xmlns="http://ns.adobe.com/air/extension/24.0">
   <id>com.github.airext.HockeyApp</id>
-  <versionNumber>0.6.1</versionNumber>
+  <versionNumber>1.0.0</versionNumber>
   <platforms>
     <platform name="iPhone-ARM">
       <applicationDeployment>
@@ -14,6 +14,13 @@
         <nativeLibrary>libANXHockeyAppSimulator.a</nativeLibrary>
         <initializer>ANXHockeyAppInitializer</initializer>
         <finalizer>ANXHockeyAppFinalizer</finalizer>
+      </applicationDeployment>
+    </platform>
+    <platform name="Android-ARM64">
+      <applicationDeployment>
+        <nativeLibrary>libANXHockeyApp.jar</nativeLibrary>
+        <initializer>com.github.airext.HockeyApp</initializer>
+        <finalizer>com.github.airext.HockeyApp</finalizer>
       </applicationDeployment>
     </platform>
     <platform name="Android-ARM">
