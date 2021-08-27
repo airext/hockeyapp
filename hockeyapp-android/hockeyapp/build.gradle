@@ -29,15 +29,13 @@ dependencies {
 }
 
 
-    task clearJar(type: Delete) {
-        delete 'build/zbar.jar'
-    }
+task clearJar(type: Delete) {
+    delete 'build/zbar.jar'
+}
 
-    task jar(type: Jar) {
-        from zipTree('build/intermediates/bundles/release/classes.jar') // add original content
-        from(file("src/main/AndroidManifest.xml")) {   // add new content
-    //        into "META-INF"
-        }
-    }
+task jar(type: Jar) {
+    exclude 'AndroidManifest.xml'
+    from zipTree('build/intermediates/packaged-classes/release/classes.jar') // add original content
+}
 
-    jar.dependsOn(clearJar, build)
+jar.dependsOn(clearJar, build)

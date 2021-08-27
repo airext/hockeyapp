@@ -124,9 +124,6 @@
 		<!-- Copy Android build artifacts to temporary build folder -->
 		<copy file="${android.project.dir}/build/libs/${project.name}.jar" tofile="temp/android/libANXHockeyApp.jar" overwrite="true"/>
 
-        <!-- Copy manifest to include it into ANE file -->
-        <copy file="${android.project.dir}/src/main/AndroidManifest.xml" todir="temp/android" overwrite="true"/>
-
         <!-- Copy Java libraries -->
         <copy todir="temp/android" overwrite="true">
             <fileset dir="${android.project.dir}/libs" includes="**/**.jar">
@@ -254,7 +251,6 @@
             <arg line="${keystore.file}"/>
             <arg line="-storepass"/>
             <arg line="${keystore.password}"/>
-            <arg line="-tsa http://timestamp.entrust.net/TSS/JavaHttpTS"/>
             <arg line="-target"/>
             <arg line="ane"/>
             <arg line="${project.name}.ane"/>
